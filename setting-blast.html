@@ -1,0 +1,1133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--favicon-->
+	<link rel="icon" href="assets/images/index.ico" type="image/png" />
+	<!--plugins-->
+	<link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+	<link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+	<link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+	<link href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+	<link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" />
+	<link href="assets/plugins/select2/css/select2-bootstrap4.css" rel="stylesheet" />
+	<link
+	href="assets/plugins/datetimepicker/css/classic.css"
+	rel="stylesheet"
+	/>
+	<link
+		href="assets/plugins/datetimepicker/css/classic.time.css"
+		rel="stylesheet"
+	/>
+	<link
+		href="assets/plugins/datetimepicker/css/classic.date.css"
+		rel="stylesheet"
+	/>
+	<link
+		rel="stylesheet"
+		href="assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.min.css"
+	/>
+	<!-- loader-->
+	<link href="assets/css/pace.min.css" rel="stylesheet" />
+	<script src="assets/js/pace.min.js"></script>
+	<!-- Bootstrap CSS -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/bootstrap-extended.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<link href="assets/css/app.css" rel="stylesheet">
+	<link href="assets/css/icons.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/header-colors.css" />
+	<title>Dashboard Monitoring</title>
+</head>
+
+<body>
+	<!--wrapper-->
+	<div class="wrapper">
+		<!--sidebar wrapper -->
+		<div class="sidebar-wrapper" data-simplebar="true">
+			<div class="sidebar-header">
+				<div style="margin-left: 72px;">
+					<img src="assets/images/logo_dct.png" class="logo-icon" width="48" height="48" alt="logo icon">
+				</div>
+				<div class="toggle-icon ms-auto"><i class='bx bx-first-page'></i>
+				</div>
+			</div>
+			<!--navigation-->
+			<ul class="metismenu" id="menu">
+				<li class="menu-label">Menu</li>
+				<li>
+					<a href="javascript:;" class="has-arrow">
+					  <div class="parent-icon">
+						<i class="lni lni-home"></i>
+					  </div>
+					  <div class="menu-title">Dashboard</div>
+					</a>
+					<ul>
+					  <li>
+						<a href="monitoring-problem.html"
+						  ><i class="bx bx-right-arrow-alt"></i>Monitoring Problem</a
+						>
+					  </li>
+					  <li>
+						<a href="performance.html"
+						  ><i class="bx bx-right-arrow-alt"></i>Performance</a
+						>
+					  </li>
+					  <li>
+						<a href="mesin.html"
+						  ><i class="bx bx-right-arrow-alt"></i>Mesin</a
+						>
+					  </li>
+					  <li>
+						<a href="outstanding-cencon.html"
+						  ><i class="bx bx-right-arrow-alt"></i>Outstanding Cencon</a
+						>
+					  </li>
+					</ul>
+				</li>
+				<li>
+					<a href="reporting.html">
+						<div class="parent-icon"><i class='bx bx-book'></i>
+						</div>
+						<div class="menu-title">Reporting</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="has-arrow">
+					  <div class="parent-icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+					  </div>
+					  <div class="menu-title">Setting</div>
+					</a>
+					<ul>
+					  <li>
+						<a href="setting-blast.html"
+						  ><i class="bx bx-right-arrow-alt"></i>Blast</a
+						>
+					  </li>
+					  <li>
+						<a href="setting-master.html"
+						  ><i class="bx bx-right-arrow-alt"></i>Master</a
+						>
+					  </li>
+					</ul>
+				</li>
+			</ul>
+			<!--end navigation-->
+		</div>
+		<!--end sidebar wrapper -->
+		<!--start header -->
+		<header>
+			<div class="topbar d-flex align-items-center">
+				<nav class="navbar navbar-expand">
+					<div class="mobile-toggle-menu"><i class='bx bx-menu'></i>
+					</div>
+					<div class="top-menu ms-auto">
+						
+						<ul class="navbar-nav align-items-center d-none">
+							<li class="nav-item dropdown dropdown-large">
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span class="alert-count">8</span>
+									<i class='lni lni-headphone'></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-end">
+									<a href="javascript:;">
+										<div class="msg-header">
+											<p class="msg-header-title">Messages</p>
+											<p class="msg-header-clear ms-auto">Marks all as read</p>
+										</div>
+									</a>
+									<div class="header-message-list">
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="user-online">
+													<img src="assets/images/avatars/avatar-1.png" class="msg-avatar" alt="user avatar">
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Daisy Anderson <span class="msg-time float-end">5 sec
+												ago</span></h6>
+													<p class="msg-info">The standard chunk of lorem</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<a href="javascript:;">
+										<div class="text-center msg-footer">View All Messages</div>
+									</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown dropdown-large">
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span class="alert-count">7</span>
+									<i class='bx bx-bell'></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-end">
+									<a href="javascript:;">
+										<div class="msg-header">
+											<p class="msg-header-title">Notifications</p>
+											<p class="msg-header-clear ms-auto">Marks all as read</p>
+										</div>
+									</a>
+									<div class="header-notifications-list">
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-primary text-primary"><i class="bx bx-group"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">New Customers<span class="msg-time float-end">14 Sec
+												ago</span></h6>
+													<p class="msg-info">5 new user registered</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<a href="javascript:;">
+										<div class="text-center msg-footer">View All Notifications</div>
+									</a>
+								</div>
+							</li>
+							
+						</ul>
+					</div>
+					<div class="user-box dropdown">
+						<a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="assets/images/avatars/nanda.jpg" class="user-img" alt="user avatar">
+							<div class="user-info ps-3">
+								<p class="user-name mb-0">Nanda Raditya</p>
+								<p class="designattion mb-0">UI/UX Designer</p>
+							</div>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li><a class="dropdown-item" href="javascript:;"><i class="bx bx-user"></i><span>Profile</span></a>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i class="bx bx-lock"></i><span>Change Password</span></a>
+							</li>
+							
+								<div class="dropdown-divider mb-0"></div>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i class='bx bx-log-out-circle'></i><span>Logout</span></a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<!--end header -->
+		<!--start page wrapper -->
+		<div class="page-wrapper">
+			<div class="page-content">
+				<div class="d-flex align-items-center mb-2">
+					<div>
+						<h5 class="font-weight-bold mb-2">Settings</h5>
+						<p>Blast & Dashboard Outstanding Problem Parameter</p>
+					</div>
+					<div class="ms-auto">
+						<button type="button" class="radius-8 btn btn-primary d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#resendModal"><i class="bx bx-mail-send"></i>Re-send</button>
+					</div>
+				</div>
+
+				<div class="alert border-0 border-start border-5 border-success alert-dismissible fade show py-2">
+					<div class="d-flex align-items-center">
+						<div class="font-35 text-success"><i class="bx bxs-check-circle"></i>
+						</div>
+						<div class="ms-3">
+							<h6 class="mb-0 text-success">Success!</h6>
+							<div>Congrats! You've successfully Resend Blast.</div>
+						</div>
+					</div>
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
+
+				<div class="card radius-10">
+					<div class="card-body">
+						<ul class="nav nav-tabs nav-primary" role="tablist">
+							<li class="nav-item" role="presentation">
+								<a class="nav-link active" data-bs-toggle="tab" href="#bankMenu" role="tab" aria-selected="true">
+									<div class="d-flex align-items-center">
+										<div class="tab-icon"><i class='bx bxs-bank font-18 me-1'></i>
+										</div>
+										<div class="tab-title">Bank</div>
+									</div>
+								</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a class="nav-link" data-bs-toggle="tab" href="#groupCategory" role="tab" aria-selected="false">
+									<div class="d-flex align-items-center">
+										<div class="tab-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users me-1"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+										</div>
+										<div class="tab-title">Group Category</div>
+									</div>
+								</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a class="nav-link" data-bs-toggle="tab" href="#blastConfig" role="tab" aria-selected="false">
+									<div class="d-flex align-items-center">
+										<div class="tab-icon"><i class='lni lni-key font-18 me-1'></i>
+										</div>
+										<div class="tab-title">Blast Config</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<div class="tab-content py-3">
+							<div class="tab-pane fade show active" id="bankMenu" role="tabpanel">
+								<div class="d-flex align-items-center mb-4">
+									<div>
+										<h5 class="font-weight-bold">Bank</h5>
+									</div>
+									<div class="ms-auto">
+										<button type="button" class="radius-8 btn btn-outline-primary d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#addNewBank"><i class="bx bx-plus"></i>Add New</button>
+									</div>
+								</div>
+
+								<div class="alert border-0 border-start border-5 border-success alert-dismissible fade show py-2">
+									<div class="d-flex align-items-center">
+										<div class="font-35 text-success"><i class="bx bxs-check-circle"></i>
+										</div>
+										<div class="ms-3">
+											<h6 class="mb-0 text-success">Success!</h6>
+											<div>Congrats! You've successfully added data.</div>
+										</div>
+									</div>
+									<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+								</div>
+
+								<div class="table-responsive">
+									<table id="tableBank" class="table mb-0 align-middle" style="width:100%">
+										<thead class="table-light">
+											<tr>
+												<th>Code</th>
+												<th>Bank Name</th>
+												<th>Status</th>
+												<th>Action</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>ADMF</td>
+												<td>PT ADIRA DINAMIKA MULTI FINANCE</td>
+												<td><div class="badge rounded-pill text-primary bg-light-primary p-2 text-uppercase px-3">
+													Active</div></td>
+												<td>
+													<div class="d-flex order-actions">
+														<a type="button" class="text-primary bg-light-primary border-0 me-3" data-bs-toggle="modal" data-bs-target="#modalEditBank"><i class="bx bxs-edit"></i></a>
+														<a type="button" class="text-danger bg-light-danger border-0" data-bs-toggle="modal" data-bs-target="#modalDeleteBank"><i class="bx bxs-trash"></i></a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>AGR</td>
+												<td>BANK AGRIS</td>
+												<td><div class="badge rounded-pill text-secondary bg-light-secondary p-2 text-uppercase px-3">
+													Inactive</div></td>
+												<td>
+													<div class="d-flex order-actions">
+														<a type="button" class="text-primary bg-light-primary border-0 me-3" data-bs-toggle="modal" data-bs-target="#modalEditBank"><i class="bx bxs-edit"></i></a>
+														<a type="button" class="text-danger bg-light-danger border-0" data-bs-toggle="modal" data-bs-target="#modalDeleteBank"><i class="bx bxs-trash"></i></a>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="groupCategory" role="tabpanel">
+								<div class="d-flex align-items-center mb-4">
+									<div>
+										<h5 class="font-weight-bold mb-2">Master Grouping Category</h5>
+									</div>
+									<div class="ms-auto">
+										<button type="button" class="radius-8 btn btn-outline-primary d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#addNewGroupCategory"><i class="bx bx-plus"></i>Add New</button>
+									</div>
+								</div>
+
+								<div class="alert border-0 border-start border-5 border-success alert-dismissible fade show py-2">
+									<div class="d-flex align-items-center">
+										<div class="font-35 text-success"><i class="bx bxs-check-circle"></i>
+										</div>
+										<div class="ms-3">
+											<h6 class="mb-0 text-success">Success!</h6>
+											<div>Congrats! You've successfully added data.</div>
+										</div>
+									</div>
+									<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+								</div>
+
+								<div class="table-responsive">
+									<table id="tableGroupingCategory" class="table mb-0 align-middle" style="width:100%">
+										<thead class="table-light">
+											<tr>
+												<th>ID Group</th>
+												<th>Group Name</th>
+												<th>Status</th>
+												<th>View Details</th>
+												<th>Action</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>01</td>
+												<td>EOB</td>
+												<td><div class="badge rounded-pill text-primary bg-light-primary p-2 text-uppercase px-3">
+													Active</div></td>
+												<td><button type="button" class="btn btn-primary btn-sm radius-30 px-4" data-bs-toggle="modal" data-bs-target="#modalViewDetail">View
+													Details</button></td>
+												<td>
+													<div class="d-flex order-actions">
+														<a type="button" class="text-primary bg-light-primary border-0 me-3" data-bs-toggle="modal" data-bs-target="#modalEditGroupCategory"><i class="bx bxs-edit"></i></a>
+														<a type="button" class="text-danger bg-light-danger border-0" data-bs-toggle="modal" data-bs-target="#modalDeleteBank"><i class="bx bxs-trash"></i></a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>02</td>
+												<td>CASH OUT</td>
+												<td><div class="badge rounded-pill text-secondary bg-light-secondary p-2 text-uppercase px-3">
+													Inactive</div></td>
+												<td><button type="button" class="btn btn-primary btn-sm radius-30 px-4" data-bs-toggle="modal" data-bs-target="#modalViewDetail">View
+													Details</button></td>
+												<td>
+													<div class="d-flex order-actions">
+														<a type="button" class="text-primary bg-light-primary border-0 me-3" data-bs-toggle="modal" data-bs-target="#modalEditGroupCategory"><i class="bx bxs-edit"></i></a>
+														<a type="button" class="text-danger bg-light-danger border-0" data-bs-toggle="modal" data-bs-target="#modalDeleteBank"><i class="bx bxs-trash"></i></a>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="blastConfig" role="tabpanel">
+								<div class="btn-group-round text-center">
+									<div class="btn-group">
+										<button type="button" class="btn btn-white tablinks selected" onclick="toggleBtn(event, '3Hours')">Outstanding 1-3 Hours / Daily</button>
+										<button type="button" class="btn btn-white tablinks" onclick="toggleBtn(event, '6Hours')">Outstanding > 6 Hours</button>
+									</div>
+								</div>
+								<hr/>
+								<div class="blast-config" id="3Hours">
+									<div class="d-flex align-items-center mb-4">
+										<div>
+											<h5 class="font-weight-bold mb-2">Outstanding 1-3 Hours / Daily</h5>
+										</div>
+										<div class="ms-auto">
+											<button type="button" class="radius-8 btn btn-outline-primary d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#addNewOutstanding3Hours"><i class="bx bx-plus"></i>Add New</button>
+										</div>
+									</div>
+	
+									<div class="alert border-0 border-start border-5 border-success alert-dismissible fade show py-2">
+										<div class="d-flex align-items-center">
+											<div class="font-35 text-success"><i class="bx bxs-check-circle"></i>
+											</div>
+											<div class="ms-3">
+												<h6 class="mb-0 text-success">Success!</h6>
+												<div>Congrats! You've successfully added data.</div>
+											</div>
+										</div>
+										<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+									</div>
+	
+									<div class="table-responsive mb-5">
+										<table id="tableOutstanding3Hours" class="table mb-0 align-middle" style="width:100%">
+											<thead class="table-light">
+												<tr>
+													<th>Employee Code</th>
+													<th>Name</th>
+													<th>Phone Number</th>
+													<th>Branch</th>
+													<th>Status</th>
+													<th>Action</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>WSS-11231</td>
+													<td>John Walker</td>
+													<td>088079878692</td>
+													<td>CIDENG</td>
+													<td><div class="badge rounded-pill text-primary bg-light-primary p-2 text-uppercase px-3">
+														Active</div></td>
+													<td>
+														<div class="d-flex order-actions">
+															<a type="button" class="text-danger bg-light-danger border-0" data-bs-toggle="modal" data-bs-target="#modalDeleteBank"><i class="bx bxs-trash"></i></a>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>WSS-11231</td>
+													<td>Anisa</td>
+													<td>088079878692</td>
+													<td>CIDENG</td>
+													<td><div class="badge rounded-pill text-primary bg-light-primary p-2 text-uppercase px-3">
+														Active</div></td>
+													<td>
+														<div class="d-flex order-actions">
+															<a type="button" class="text-danger bg-light-danger border-0" data-bs-toggle="modal" data-bs-target="#modalDeleteBank"><i class="bx bxs-trash"></i></a>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>WSS-11231</td>
+													<td>Hary Maguire</td>
+													<td>088079878692</td>
+													<td>CIDENG</td>
+													<td><div class="badge rounded-pill text-primary bg-light-primary p-2 text-uppercase px-3">
+														Active</div></td>
+													<td>
+														<div class="d-flex order-actions">
+															<a type="button" class="text-danger bg-light-danger border-0" data-bs-toggle="modal" data-bs-target="#modalDeleteBank"><i class="bx bxs-trash"></i></a>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>WSS-11231</td>
+													<td>Paul</td>
+													<td>088079878692</td>
+													<td>CIDENG</td>
+													<td><div class="badge rounded-pill text-primary bg-light-primary p-2 text-uppercase px-3">
+														Active</div></td>
+													<td>
+														<div class="d-flex order-actions">
+															<a type="button" class="text-danger bg-light-danger border-0" data-bs-toggle="modal" data-bs-target="#modalDeleteBank"><i class="bx bxs-trash"></i></a>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>WSS-11231</td>
+													<td>Felix</td>
+													<td>088079878692</td>
+													<td>CIDENG</td>
+													<td><div class="badge rounded-pill text-primary bg-light-primary p-2 text-uppercase px-3">
+														Active</div></td>
+													<td>
+														<div class="d-flex order-actions">
+															<a type="button" class="text-danger bg-light-danger border-0" data-bs-toggle="modal" data-bs-target="#modalDeleteBank"><i class="bx bxs-trash"></i></a>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+								<div class="blast-config" id="6Hours" style="display: none;">
+									<div class="d-flex align-items-center mb-4">
+										<div>
+											<h5 class="font-weight-bold mb-2">Outstanding > 6 Hours</h5>
+										</div>
+										<div class="ms-auto">
+											<button type="button" class="radius-8 btn btn-outline-primary d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#addNewOutstanding6Hours"><i class="bx bx-plus"></i>Add New</button>
+										</div>
+									</div>
+	
+									<div class="alert border-0 border-start border-5 border-success alert-dismissible fade show py-2">
+										<div class="d-flex align-items-center">
+											<div class="font-35 text-success"><i class="bx bxs-check-circle"></i>
+											</div>
+											<div class="ms-3">
+												<h6 class="mb-0 text-success">Success!</h6>
+												<div>Congrats! You've successfully added data.</div>
+											</div>
+										</div>
+										<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+									</div>
+	
+									<div class="table-responsive">
+										<table id="tableOutstanding6Hours" class="table mb-0 align-middle" style="width:100%">
+											<thead class="table-light">
+												<tr>
+													<th>Employee Code</th>
+													<th>Name</th>
+													<th>Phone Number</th>
+													<th>Branch</th>
+													<th>Status</th>
+													<th>Action</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>WSS-11231</td>
+													<td>JOHN WALKER</td>
+													<td>088079878692</td>
+													<td>CIDENG</td>
+													<td><div class="badge rounded-pill text-primary bg-light-primary p-2 text-uppercase px-3">
+														Active</div></td>
+													<td>
+														<div class="d-flex order-actions">
+															<a type="button" class="text-danger bg-light-danger border-0" data-bs-toggle="modal" data-bs-target="#modalDeleteBank"><i class="bx bxs-trash"></i></a>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+			<!-- MODAL RESEND -->
+			<div class="modal fade" id="resendModal" tabindex="-1" aria-labelledby="resendModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg modal-dialog-centered">
+					<div class="modal-content radius-10">
+						<div class="modal-header">
+							<h5 class="modal-title" id="resendModalLabel">Re-send</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal"
+								aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							Are you sure want to re-send this blast?
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary radius-8"
+								data-bs-dismiss="modal">Cancel</button>
+							<button type="button" class="btn btn-primary radius-8"><i class="bx bx-mail-send"></i>Resend</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END MODAL RESEND -->
+
+			<!-- MODAL Delete -->
+			<div class="modal fade" id="modalDeleteBank" tabindex="-1" aria-labelledby="modalDeleteBankLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg modal-dialog-centered">
+					<div class="modal-content radius-10">
+						<div class="modal-header">
+							<h5 class="modal-title" id="modalDeleteBankLabel">Delete</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal"
+								aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							Are you sure want to delete this data
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary radius-8"
+								data-bs-dismiss="modal">Cancel</button>
+							<button type="button" class="btn btn-danger radius-8">Delete</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END MODAL Delete -->
+
+			<!-- MODAL Add New Bank -->
+			<div class="modal fade" id="addNewBank" tabindex="-1" aria-labelledby="addNewBankLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg modal-dialog-centered">
+					<div class="modal-content radius-10">
+						<div class="modal-header">
+							<h5 class="modal-title" id="addNewBankLabel">Add New Bank</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal"
+								aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<div class="mb-3">
+								<label class="form-label">Select Bank</label>
+								<select class="form-select" id="selectBank">
+									<option value="" selected>Select Bank...</option>
+									<option value="admf">ADMF - PT ADIRA DINAMIKA MULTI FINANCE</option>
+									<option value="agr">AGR - BANK AGRIS</option>
+								</select>
+							</div>
+							<div class="mb-3">
+								<label for="" class="form-label">Status</label>
+								<div class="form-check form-switch">
+									<input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked="">
+									<label class="form-check-label" for="flexSwitchCheckChecked">Active</label>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary radius-8"
+								data-bs-dismiss="modal">Cancel</button>
+							<button type="button" class="btn btn-primary radius-8"><i class="bx bx-check"></i>Submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END MODAL Add New Bank -->
+
+			<!-- MODAL Edit Bank -->
+			<div class="modal fade" id="modalEditBank" tabindex="-1" aria-labelledby="modalEditBankLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg modal-dialog-centered">
+					<div class="modal-content radius-10">
+						<div class="modal-header">
+							<h5 class="modal-title" id="modalEditBankLabel">Edit Bank</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal"
+								aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<div class="mb-3">
+								<label for="code" class="form-label">Code</label>
+								<input type="text" class="form-control" id="code" placeholder="Code...">
+							</div>
+							<div class="mb-3">
+								<label for="bankName" class="form-label">Bank Name</label>
+								<input type="text" class="form-control" id="bankName" placeholder="Bank Name...">
+							</div>
+							<div class="mb-3">
+								<label for="" class="form-label">Status</label>
+								<div class="form-check form-switch">
+									<input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked="">
+									<label class="form-check-label" for="flexSwitchCheckChecked">Active</label>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary radius-8"
+								data-bs-dismiss="modal">Cancel</button>
+							<button type="button" class="btn btn-primary radius-8"><i class="bx bx-check"></i>Submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END MODAL Edit Bank -->
+
+			<!-- MODAL Add New Group Category -->
+			<div class="modal fade" id="addNewGroupCategory" tabindex="-1" aria-labelledby="addNewGroupCategoryLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg modal-dialog-centered">
+					<div class="modal-content radius-10">
+						<div class="modal-header">
+							<h5 class="modal-title" id="addNewGroupCategoryLabel">Add New Group Category</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal"
+								aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<div class="mb-3">
+								<label for="groupName" class="form-label">Group Name</label>
+								<input type="text" class="form-control" id="groupName" placeholder="Group Name...">
+							</div>
+							<div class="mb-3">
+								<label for="" class="form-label">Status</label>
+								<div class="form-check form-switch">
+									<input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked="">
+									<label class="form-check-label" for="flexSwitchCheckChecked">Active</label>
+								</div>
+							</div>
+							<div class="mb-3">
+								<label class="form-label">Category List</label>
+								<select class="multiple-select" data-placeholder="Choose anything" multiple="multiple">
+									<option value="101">101 - NO TRX</option>
+									<option value="103">103 - CASSETTE</option>
+									<option value="123">123 - STUCK</option>
+									<option value="100">100 - JAMMING</option>
+								</select>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary radius-8"
+								data-bs-dismiss="modal">Cancel</button>
+								<button type="button" class="btn btn-primary radius-8"><i class="bx bx-check"></i>Submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END MODAL Add New Group Category -->
+
+			<!-- MODAL Edit Group Category -->
+			<div class="modal fade" id="modalEditGroupCategory" tabindex="-1" aria-labelledby="modalEditGroupCategoryLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg modal-dialog-centered">
+					<div class="modal-content radius-10">
+						<div class="modal-header">
+							<h5 class="modal-title" id="modalEditGroupCategoryLabel">Edit Group Category</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal"
+								aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<div class="mb-3">
+								<label for="groupName" class="form-label">Group Name</label>
+								<input type="text" class="form-control" id="groupName" placeholder="Group Name...">
+							</div>
+							<div class="mb-3">
+								<label for="" class="form-label">Status</label>
+								<div class="form-check form-switch">
+									<input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked="">
+									<label class="form-check-label" for="flexSwitchCheckChecked">Active</label>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary radius-8"
+								data-bs-dismiss="modal">Cancel</button>
+							<button type="button" class="btn btn-primary radius-8"><i class="bx bx-check"></i>Submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END MODAL Edit Group Category -->
+
+			<!-- MODAL Detail Grouping Category -->
+			<div class="modal fade" id="modalViewDetail" tabindex="-1" aria-labelledby="modalViewDetailLabel" aria-hidden="true">
+				<div class="modal-dialog modal-xl modal-dialog-centered">
+					<div class="modal-content radius-10">
+						<div class="modal-body">
+							<div class="d-flex align-items-center mb-2">
+								<div>
+									<h5 class="font-weight-bold mb-2">Detail Grouping Category</h5>
+								</div>
+								<div class="ms-auto">
+									<button id="toggleCategoryList" type="button" class="radius-8 btn btn-outline-primary d-flex align-items-center"><i class="bx bx-plus"></i>Add New</button>
+								</div>
+							</div>
+							<div class="alert border-0 border-start border-5 border-success alert-dismissible fade show py-2">
+								<div class="d-flex align-items-center">
+									<div class="font-35 text-success"><i class="bx bxs-check-circle"></i>
+									</div>
+									<div class="ms-3">
+										<h6 class="mb-0 text-success">Success!</h6>
+										<div>Congrats! You've successfully added data.</div>
+									</div>
+								</div>
+								<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+							</div>
+							<div class="mb-3" id="categoryList" style="display: none;">
+								<label class="form-label">Category List</label>
+								<div class="input-group mb-3">
+									<select class="multiple-select-2" data-placeholder="Choose anything" multiple="multiple">
+										<option value="101">101 - NO TRX</option>
+										<option value="103">103 - CASSETTE</option>
+										<option value="123">123 - STUCK</option>
+										<option value="100">100 - JAMMING</option>
+									</select>
+									<button class="btn btn-outline-primary" type="button" id="button-addon"><i class="bx bx-check"></i>Submit</button>
+								</div>
+							</div>
+							<hr/>
+
+							<div class="table-responsive">
+								<table id="tableDetailGroupingCategory" class="table mb-0 align-middle" style="width:100%">
+									<thead class="table-light">
+										<tr>
+											<th>ID Group</th>
+											<th>Code</th>
+											<th>Category Name</th>
+											<th>Action</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>01</td>
+											<td>101</td>
+											<td>NO TRX</td>
+											<td>
+												<div class="d-flex order-actions">
+													<a type="button" class="text-danger bg-light-danger border-0" data-bs-toggle="modal" data-bs-target="#modalDeleteBank"><i class="bx bxs-trash"></i></a>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary radius-8"
+								data-bs-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END MODAL Detail Grouping Category -->
+			
+			<!-- MODAL Add New Outstanding 1-3 Hours / Daily -->
+			<div class="modal fade" id="addNewOutstanding3Hours" tabindex="-1" aria-labelledby="addNewOutstanding3HoursLabel" aria-hidden="true">
+				<div class="modal-dialog modal-xl modal-dialog-centered">
+					<div class="modal-content radius-10">
+						<div class="modal-header">
+							<h5 class="modal-title" id="addNewOutstanding3HoursLabel">Add New Outstanding 1-3 Hours / Daily</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal"
+								aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<!-- <div class="mb-3">
+								<label class="form-label">Employee List</label>
+								<select class="multiple-select-3" data-placeholder="Choose anything" multiple="multiple">
+									<option value="WSS-11231">WSS-11231 • John Walker • Cideng</option>
+									<option value="WSS-11232">WSS-11232 • Rizky Fadillah • Bandung</option>
+									<option value="WSS-11233">WSS-11233 • Ilham Darmawan • Cideng</option>
+									<option value="WSS-11234">WSS-11234 • Hana Tirtawijaya • Rawamangun</option>
+								</select>
+							</div> -->
+							<div class="table-responsive">
+								<table id="tableAddNewOutstanding3Hours" class="table mb-0 align-middle" style="width:100%">
+									<thead class="table-light">
+										<tr>
+											<th>Employee Code</th>
+											<th>Name</th>
+											<th>Phone Number</th>
+											<th>Branch</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>WSS-11231</td>
+											<td>John Walker</td>
+											<td>088079878692</td>
+											<td>CIDENG</td>
+											<td><div class="badge rounded-pill text-primary bg-light-primary p-2 text-uppercase px-3">
+												Active</div></td>
+										</tr>
+										<tr>
+											<td>WSS-32334</td>
+											<td>Rizky</td>
+											<td>081234567890</td>
+											<td>Rawamangun</td>
+											<td><div class="badge rounded-pill text-secondary bg-light-secondary p-2 text-uppercase px-3">
+												Inactive</div></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary radius-8"
+								data-bs-dismiss="modal">Cancel</button>
+							<button type="button" class="btn btn-primary radius-8"><i class="bx bx-check"></i>Submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END MODAL Add New Outstanding 1-3 Hours / Daily -->
+
+			<!-- MODAL Add New Outstanding > 6 Hours -->
+			<div class="modal fade" id="addNewOutstanding6Hours" tabindex="-1" aria-labelledby="addNewOutstanding3HoursLabel" aria-hidden="true">
+				<div class="modal-dialog modal-xl modal-dialog-centered">
+					<div class="modal-content radius-10">
+						<div class="modal-header">
+							<h5 class="modal-title" id="addNewOutstanding3HoursLabel">Add New Outstanding > 6 Hours</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal"
+								aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<!-- <div class="mb-3">
+								<label class="form-label">Employee List</label>
+								<select class="multiple-select-3" data-placeholder="Choose anything" multiple="multiple">
+									<option value="WSS-11231">WSS-11231 • John Walker • Cideng</option>
+									<option value="WSS-11232">WSS-11232 • Rizky Fadillah • Bandung</option>
+									<option value="WSS-11233">WSS-11233 • Ilham Darmawan • Cideng</option>
+									<option value="WSS-11234">WSS-11234 • Hana Tirtawijaya • Rawamangun</option>
+								</select>
+							</div> -->
+							<div class="table-responsive">
+								<table id="tableAddNewOutstanding6Hours" class="table mb-0 align-middle" style="width:100%">
+									<thead class="table-light">
+										<tr>
+											<th>Employee Code</th>
+											<th>Name</th>
+											<th>Phone Number</th>
+											<th>Branch</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>WSS-11231</td>
+											<td>John Walker</td>
+											<td>088079878692</td>
+											<td>CIDENG</td>
+											<td><div class="badge rounded-pill text-primary bg-light-primary p-2 text-uppercase px-3">
+												Active</div></td>
+										</tr>
+										<tr>
+											<td>WSS-32334</td>
+											<td>Rizky</td>
+											<td>081234567890</td>
+											<td>Rawamangun</td>
+											<td><div class="badge rounded-pill text-secondary bg-light-secondary p-2 text-uppercase px-3">
+												Inactive</div></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary radius-8"
+								data-bs-dismiss="modal">Cancel</button>
+							<button type="button" class="btn btn-primary radius-8"><i class="bx bx-check"></i>Submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END MODAL Add New Outstanding > 6 Hours -->
+
+
+		</div>
+		<!--end page wrapper -->
+		<!--start overlay-->
+		<div class="overlay toggle-icon"></div>
+		<!--end overlay-->
+		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
+		<!--End Back To Top Button-->
+		<footer class="page-footer">
+			<p class="mb-0">Copyright © 2024. All right reserved.</p>
+		</footer>
+	</div>
+	<!--end wrapper-->
+	<!-- Bootstrap JS -->
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<!--plugins-->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+	<script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+	<script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+	<script src="assets/js/custom.js"></script>
+	<script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+	<script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
+	<script src="assets/plugins/select2/js/select2.min.js"></script>
+	<script src="assets/plugins/apexcharts-bundle/js/apexcharts.min.js"></script>
+	<script src="assets/js/chart-dashboard.js"></script>
+	<script src="assets/js/script.js"></script>
+	
+	<!-- JavaScript -->
+	<script src="js/script.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			var table = $('#tableBank').DataTable({
+			});
+		});
+
+		$(document).ready(function () {
+			var table = $('#tableGroupingCategory').DataTable({
+				pageLength: 5
+			});
+		});
+
+		$(document).ready(function () {
+			var table = $('#tableDetailGroupingCategory').DataTable({
+				pageLength: 5
+			});
+		});
+
+		$(document).ready(function () {
+			var table = $('#tableOutstanding3Hours').DataTable({
+				pageLength: 5,
+			});
+		});
+
+		$(document).ready(function () {
+			var table = $('#tableOutstanding6Hours').DataTable({
+				pageLength: 5,
+			});
+		});
+
+		$(document).ready(function () {
+			var table = $('#tableAddNewOutstanding3Hours').DataTable({
+				'columnDefs': [
+					{
+						'targets': 0,
+						'checkboxes': {
+							'selectRow': true
+						}
+					}
+				],
+				'select': {
+					'style': 'multi'
+				},
+				'order': [[1, 'asc']]
+			});
+		});
+
+		$(document).ready(function () {
+			var table = $('#tableAddNewOutstanding6Hours').DataTable({
+				'columnDefs': [
+					{
+						'targets': 0,
+						'checkboxes': {
+							'selectRow': true
+						}
+					}
+				],
+				'select': {
+					'style': 'multi'
+				},
+				'order': [[1, 'asc']]
+			});
+		});
+
+
+		
+
+		
+		
+	</script>
+	<script>
+		$('.multiple-select').select2({
+			dropdownParent: $('#addNewGroupCategory'),
+			theme: 'bootstrap4',
+			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+			placeholder: $(this).data('placeholder'),
+			allowClear: Boolean($(this).data('allow-clear')),
+		});
+
+		$('.multiple-select-2').select2({
+			dropdownParent: $('#modalViewDetail'),
+			theme: 'bootstrap4',
+			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+			placeholder: $(this).data('placeholder'),
+			allowClear: Boolean($(this).data('allow-clear')),
+		});
+
+		$('.multiple-select-3').select2({
+			dropdownParent: $('#addNewOutstanding3Hours'),
+			theme: 'bootstrap4',
+			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+			placeholder: $(this).data('placeholder'),
+			allowClear: Boolean($(this).data('allow-clear')),
+		});
+
+		$('#selectBank').select2({
+			dropdownParent: $('#addNewBank'),
+			theme: 'bootstrap4',
+			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+			placeholder: $(this).data('placeholder'),
+			allowClear: Boolean($(this).data('allow-clear')),
+		});
+
+		
+	</script>
+
+<script>
+    document.getElementById('toggleCategoryList').addEventListener('click', function() {
+        var categoryList = document.getElementById('categoryList');
+        if (categoryList.style.display === 'none') {
+            categoryList.style.display = 'block';
+        } else {
+            categoryList.style.display = 'none';
+        }
+    });
+</script>
+<script>
+	function toggleBtn(evt, menuName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("blast-config");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.transform = "scaleY(0.2)";
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" selected", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.className += " selected";
+  setTimeout(() => {
+    document.getElementById(menuName).style.transform = "scaleY(1)";
+  }, 50);
+}
+</script>
+	<!--app JS-->
+	<script src="assets/js/app.js"></script>
+</body>
+
+</html>

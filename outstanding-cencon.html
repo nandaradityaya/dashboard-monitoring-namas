@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--favicon-->
+	<link rel="icon" href="assets/images/index.ico" type="image/png" />
+	<!--plugins-->
+	<link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+	<link href="assets/plugins/fullcalendar/css/main.min.css" rel="stylesheet" />
+	<link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+	<link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+	<link href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+	<link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" />
+	<link href="assets/plugins/select2/css/select2-bootstrap4.css" rel="stylesheet" />
+	<link
+	href="assets/plugins/datetimepicker/css/classic.css"
+	rel="stylesheet"
+	/>
+	<link
+		href="assets/plugins/datetimepicker/css/classic.time.css"
+		rel="stylesheet"
+	/>
+	<link
+		href="assets/plugins/datetimepicker/css/classic.date.css"
+		rel="stylesheet"
+	/>
+	<link
+		rel="stylesheet"
+		href="assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.min.css"
+	/>
+	<!-- loader-->
+	<link href="assets/css/pace.min.css" rel="stylesheet" />
+	<script src="assets/js/pace.min.js"></script>
+	<!-- Bootstrap CSS -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/bootstrap-extended.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<link href="assets/css/app.css" rel="stylesheet">
+	<link href="assets/css/icons.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/header-colors.css" />
+	<title>Dashboard Monitoring</title>
+</head>
+
+<body>
+	<!--wrapper-->
+	<div class="wrapper">
+		<!--sidebar wrapper -->
+		<div class="sidebar-wrapper" data-simplebar="true">
+			<div class="sidebar-header">
+				<div style="margin-left: 72px;">
+					<img src="assets/images/logo_dct.png" class="logo-icon" width="48" height="48" alt="logo icon">
+				</div>
+				<div class="toggle-icon ms-auto"><i class='bx bx-first-page'></i>
+				</div>
+			</div>
+			<!--navigation-->
+			<ul class="metismenu" id="menu">
+				<li class="menu-label">Menu</li>
+				<li>
+					<a href="javascript:;" class="has-arrow">
+					  <div class="parent-icon">
+						<i class="lni lni-home"></i>
+					  </div>
+					  <div class="menu-title">Dashboard</div>
+					</a>
+					<ul>
+					  <li>
+						<a href="monitoring-problem.html"
+						  ><i class="bx bx-right-arrow-alt"></i>Monitoring Problem</a
+						>
+					  </li>
+					  <li>
+						<a href="performance.html"
+						  ><i class="bx bx-right-arrow-alt"></i>Performance</a
+						>
+					  </li>
+					  <li>
+						<a href="mesin.html"
+						  ><i class="bx bx-right-arrow-alt"></i>Mesin</a
+						>
+					  </li>
+					  <li>
+						<a href="outstanding-cencon.html"
+						  ><i class="bx bx-right-arrow-alt"></i>Outstanding Cencon</a
+						>
+					  </li>
+					</ul>
+				</li>
+				<li>
+					<a href="reporting.html">
+						<div class="parent-icon"><i class='bx bx-book'></i>
+						</div>
+						<div class="menu-title">Reporting</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="has-arrow">
+					  <div class="parent-icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+					  </div>
+					  <div class="menu-title">Setting</div>
+					</a>
+					<ul>
+					  <li>
+						<a href="setting-blast.html"
+						  ><i class="bx bx-right-arrow-alt"></i>Blast</a
+						>
+					  </li>
+					  <li>
+						<a href="setting-master.html"
+						  ><i class="bx bx-right-arrow-alt"></i>Master</a
+						>
+					  </li>
+					</ul>
+				</li>
+			</ul>
+			<!--end navigation-->
+		</div>
+		<!--end sidebar wrapper -->
+		<!--start header -->
+		<header>
+			<div class="topbar d-flex align-items-center">
+				<nav class="navbar navbar-expand">
+					<div class="mobile-toggle-menu"><i class='bx bx-menu'></i>
+					</div>
+					<div class="top-menu ms-auto">
+						
+						<ul class="navbar-nav align-items-center d-none">
+							<li class="nav-item dropdown dropdown-large">
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span class="alert-count">8</span>
+									<i class='lni lni-headphone'></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-end">
+									<a href="javascript:;">
+										<div class="msg-header">
+											<p class="msg-header-title">Messages</p>
+											<p class="msg-header-clear ms-auto">Marks all as read</p>
+										</div>
+									</a>
+									<div class="header-message-list">
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="user-online">
+													<img src="assets/images/avatars/avatar-1.png" class="msg-avatar" alt="user avatar">
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Daisy Anderson <span class="msg-time float-end">5 sec
+												ago</span></h6>
+													<p class="msg-info">The standard chunk of lorem</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<a href="javascript:;">
+										<div class="text-center msg-footer">View All Messages</div>
+									</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown dropdown-large">
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span class="alert-count">7</span>
+									<i class='bx bx-bell'></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-end">
+									<a href="javascript:;">
+										<div class="msg-header">
+											<p class="msg-header-title">Notifications</p>
+											<p class="msg-header-clear ms-auto">Marks all as read</p>
+										</div>
+									</a>
+									<div class="header-notifications-list">
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-primary text-primary"><i class="bx bx-group"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">New Customers<span class="msg-time float-end">14 Sec
+												ago</span></h6>
+													<p class="msg-info">5 new user registered</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<a href="javascript:;">
+										<div class="text-center msg-footer">View All Notifications</div>
+									</a>
+								</div>
+							</li>
+							
+						</ul>
+					</div>
+					<div class="user-box dropdown">
+						<a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="assets/images/avatars/nanda.jpg" class="user-img" alt="user avatar">
+							<div class="user-info ps-3">
+								<p class="user-name mb-0">Nanda Raditya</p>
+								<p class="designattion mb-0">UI/UX Designer</p>
+							</div>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li><a class="dropdown-item" href="javascript:;"><i class="bx bx-user"></i><span>Profile</span></a>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i class="bx bx-lock"></i><span>Change Password</span></a>
+							</li>
+							
+								<div class="dropdown-divider mb-0"></div>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i class='bx bx-log-out-circle'></i><span>Logout</span></a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<!--end header -->
+		<!--start page wrapper -->
+		<div class="page-wrapper">
+			<div class="page-content">
+				<div class="d-flex align-items-center justify-content-between mb-4">
+					<!--breadcrumb-->
+					<div class="page-breadcrumb d-none d-sm-flex align-items-center">
+						<div class="breadcrumb-title pe-3">Dashboard</div>
+						<div class="ps-3">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb mb-0 p-0">
+									<li class="breadcrumb-item"><a href="javascript:;"><i class="lni lni-home"></i></a>
+									</li>
+									<li class="breadcrumb-item active" aria-current="page">Outstanding Cencon</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+					<!--end breadcrumb-->
+				</div>
+
+				<div class="row align-items-center justify-content-between mb-3">
+
+					<div class="col-12 col-lg-6 mb-lg-0 mb-3 d-flex align-items-center">
+						<label class="form-label mb-0 me-1">Time Server / Sync :</label>
+						<div id="datetime"></div>
+					</div>
+
+					<div class="col-12 col-lg-6 d-flex align-items-center gap-3">
+						<div class="position-relative ms-auto">
+							<input type="text" class="form-control ps-5 radius-10" placeholder="Search...">
+							<span class="position-absolute top-50 product-show translate-middle-y"><i class="bx bx-search"></i></span>
+						  </div>
+						<button class="btn btn-white radius-10 d-flex align-items-center px-3 font-14"><i class="bx bx-filter me-2"></i>Filter</button>
+						<button class="btn btn-white radius-10 d-flex align-items-center px-3 font-14"><i class="bx bx-export me-2"></i>Export</button>
+					</div>
+				</div>
+
+				
+
+				<div class="row">
+					<div class="col-12 col-lg-4 d-flex">
+						<div class="card radius-10 w-100" style="background-color: #E3F5FF;">
+							<div class="card-body">
+							  <div class="row align-items-center">
+								<div class="col-12 col-lg-5 text-center justify-content-center">
+									<p class="mb-0 text-dark">Total Request Open</p>
+									<h4 class="text-dark my-1">455</h4>
+								  </div>
+								<div class="col-12 col-lg-7" style="border-left: 1px solid #bdbdbd;">
+									<div class="row">
+										<div class="col-12">
+											<div class="d-flex justify-content-between">
+												<div class="bg-light-info py-1 px-2 radius-8 mb-2 cursor-pointer">
+													<i class="bx bxs-circle me-1" style="color: #A1E3CB;"></i>
+													Outstanding
+												</div>
+												<div class="font-13 font-weight-bold text-dark mb-2">
+													<span>159</span> | <span>35%</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="d-flex justify-content-between">
+												<div class="bg-light-info py-1 px-2 radius-8 mb-2 cursor-pointer">
+													<i class="bx bxs-circle me-1" style="color: #B1E3FF;"></i>
+													Done
+												</div>
+												<div class="font-13 font-weight-bold text-dark mb-2">
+													<span>296</span> | <span>65%</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							  </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-lg-4 d-flex">
+						<div class="card radius-10 w-100" style="background-color: #E5ECF6;">
+							<div class="card-body">
+								<div class="row align-items-center">
+								  <div class="col-12 col-lg-5 text-center justify-content-center">
+									  <p class="mb-0 text-dark">Total Request Open</p>
+									  <h4 class="text-dark my-1">446</h4>
+									</div>
+								  <div class="col-12 col-lg-7" style="border-left: 1px solid #bdbdbd;">
+									<div class="row">
+										<div class="col-12">
+											<div class="d-flex justify-content-between">
+												<div class="bg-light-info py-1 px-2 radius-8 mb-2 cursor-pointer">
+													<i class="bx bxs-circle me-1" style="color: #A1E3CB;"></i>
+													Outstanding
+												</div>
+												<div class="font-13 font-weight-bold text-dark mb-2">
+													<span>159</span> | <span>35%</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="d-flex justify-content-between">
+												<div class="bg-light-info py-1 px-2 radius-8 mb-2 cursor-pointer">
+													<i class="bx bxs-circle me-1" style="color: #B1E3FF;"></i>
+													Done
+												</div>
+												<div class="font-13 font-weight-bold text-dark mb-2">
+													<span>296</span> | <span>65%</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								  </div>
+								</div>
+							  </div>
+						</div>
+					</div>
+					<div class="col-12 col-lg-4 d-flex">
+						<div class="card radius-10 w-100" style="background-color: #E3F5FF;">
+							<div class="card-body">
+							  <div class="row align-items-center">
+								<div class="col-12 col-lg-5 text-center justify-content-center">
+									<p class="mb-0 text-dark">Total Fetch</p>
+									<h4 class="text-dark my-1">130</h4>
+								  </div>
+								<div class="col-12 col-lg-7" style="border-left: 1px solid #bdbdbd;">
+									<div class="row">
+										<div class="col-12">
+											<div class="d-flex justify-content-between">
+												<div class="bg-light-info py-1 px-2 radius-8 mb-2 cursor-pointer">
+													<i class="bx bxs-circle me-1" style="color: #0dcaf0;"></i>
+													On Time
+												</div>
+												<div class="font-13 font-weight-bold text-dark mb-2">
+													<span>103</span> | <span>87%</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="d-flex justify-content-between">
+												<div class="bg-light-info py-1 px-2 radius-8 mb-2 cursor-pointer">
+													<i class="bx bxs-circle me-1" style="color: #e5e7e8;"></i>
+													Late
+												</div>
+												<div class="font-13 font-weight-bold text-dark mb-2">
+													<span>27</span> | <span>23%</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-12 col-lg-9">
+					  <div class="card radius-10">
+						<div class="card-body">
+							<div class="tab-pane fade show active" id="inputPerformance" role="tabpanel">
+								<div class="d-lg-flex align-items-center mb-3">
+									<div>
+									  <h6 class="font-weight-bold mb-2 mb-lg-0">
+										User Fetch
+									  </h6>
+									</div>
+									<div class="d-flex align-items-center ms-auto font-13 gap-2">
+										<span class="px-1 rounded cursor-pointer"
+										  ><i class="bx bxs-circle me-1" style="color: #0dcaf0;"></i
+										  >On Time</span
+										>
+										<span class="px-1 rounded cursor-pointer"
+										  ><i class="bx bxs-circle me-1" style="color: #e5e7e8;"></i
+										  >Late</span
+										>
+									</div>
+								</div>
+								<div id="userFetchOutstandingCencon"></div>
+							</div>
+						</div>
+					  </div>
+
+					  <div class="card radius-10 w-100">
+						<div class="card-body">
+							<ul class="nav nav-tabs nav-primary mb-3" role="tablist">
+								<li class="nav-item" role="presentation">
+									<a class="nav-link active" data-bs-toggle="tab" href="#openDetails" role="tab" aria-selected="true">
+										<div class="d-flex align-items-center">
+											<div class="tab-title">Open</div>
+										</div>
+									</a>
+								</li>
+								<li class="nav-item" role="presentation">
+									<a class="nav-link" data-bs-toggle="tab" href="#closeDetails" role="tab" aria-selected="false">
+										<div class="d-flex align-items-center">
+											<div class="tab-title">Close</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+
+							<div class="tab-content py-3">
+								<div class="tab-pane fade show active" id="openDetails" role="tabpanel">
+									<div class="d-lg-flex align-items-center mb-3">
+										<div>
+										  <h6 class="font-weight-bold mb-2 mb-lg-0">
+											Details
+										  </h6>
+										</div>
+									</div>
+									<div class="table-responsive">
+										<table id="tableOpenDetails" class="table mb-0 align-middle" style="width:100%">
+											<thead class="table-light">
+												<tr>
+													<th>No Ticket</th>
+													<th>Branch</th>
+													<th>Bank</th>
+													<th>WSID</th>
+													<th>Location</th>
+													<th>Time Request</th>
+													<th>Duration</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>202411234</td>
+													<td>Cideng</td>
+													<td>BCA</td>
+													<td>BCA-1123</td>
+													<td>KCP Palmerah</td>
+													<td>10/03/2024 16.40</td>
+													<td>120</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+								<div class="tab-pane fade" id="closeDetails" role="tabpanel">
+									<div class="d-lg-flex align-items-center mb-3">
+										<div>
+										  <h6 class="font-weight-bold mb-2 mb-lg-0">
+											Details
+										  </h6>
+										</div>
+									</div>
+									<div class="table-responsive">
+										<table id="tableCloseDetails" class="table mb-0 align-middle" style="width:100%">
+											<thead class="table-light">
+												<tr>
+													<th>No Ticket</th>
+													<th>Branch</th>
+													<th>Bank</th>
+													<th>WSID</th>
+													<th>Location</th>
+													<th>Time Request</th>
+													<th>Duration</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>202411234</td>
+													<td>Rawamangun</td>
+													<td>BCA</td>
+													<td>BCA-1123</td>
+													<td>KCP Palmerah</td>
+													<td>10/03/2024 16.40</td>
+													<td>60</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					  </div>
+					</div>
+					<div class="col-12 col-lg-3 d-flex">
+					  <div class="card radius-10 w-100">
+						<div class="card-body" style="padding: 24px;">
+							<div class="d-lg-flex align-items-center mb-3">
+								<div>
+								  <h6 class="font-weight-bold mb-3">
+									Log Request (OC) & (CC)
+								  </h6>
+								</div>
+							</div>
+
+							<div class="outstanding">
+								<p class="font-16 font-weight-bold mb-0">Outstanding <span>(3)</span></p>
+								<div class="mt-3">
+									<div class="d-flex gap-3 align-items-top mb-3">
+									<div class="">
+										<img
+										src="assets/images/icons/ic_down.svg"
+										width="45"
+										height="45"
+										class="rounded-circle"
+										alt=""
+										/>
+									</div>
+									<div class="ps-2">
+										<h6 class="mb-1 font-weight-bold">
+										PMT-1124
+										</h6>
+										<p class="mb-0 font-14 text-secondary font-weight-bold">
+										27 March 2024 14.35
+										</p>
+										<p class="mb-0 font-14 text-secondary font-weight-bold">
+											Status: <span>Fetched</span>
+										</p>
+										<p class="mb-0 font-14 text-secondary font-weight-bold">
+											User Fetch: <span>Aziz</span>
+										</p>
+									</div>
+									</div>
+									<div class="d-flex gap-3 align-items-top mb-3">
+										<div class="">
+										<img
+											src="assets/images/icons/ic_up.svg"
+											width="45"
+											height="45"
+											class="rounded-circle"
+											alt=""
+										/>
+										</div>
+										<div class="ps-2">
+										<h6 class="mb-1 font-weight-bold">
+											BRI-1115
+										</h6>
+										<p class="mb-0 font-14 text-secondary font-weight-bold">
+											27 March 2024 14.35
+										</p>
+										<p class="mb-0 font-14 text-secondary font-weight-bold">
+											Status: <span>Fetched</span>
+										</p>
+										<p class="mb-0 font-14 text-secondary font-weight-bold">
+											User Fetch: <span>Aziz</span>
+										</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="history">
+								<p class="font-16 font-weight-bold mb-0">History <span>(4)</span></p>
+								<div class="mt-3">
+									<div class="d-flex gap-3 align-items-top mb-3">
+									<div class="">
+										<img
+										src="assets/images/icons/ic_down.svg"
+										width="45"
+										height="45"
+										class="rounded-circle"
+										alt=""
+										/>
+									</div>
+									<div class="ps-2">
+										<h6 class="mb-1 font-weight-bold">
+										BRI-1112
+										</h6>
+										<p class="mb-0 font-14 text-secondary font-weight-bold">
+										27 March 2024 14.35
+										</p>
+										<p class="mb-0 font-14 text-secondary font-weight-bold">
+											Status: <span>Fetched</span>
+										</p>
+										<p class="mb-0 font-14 text-secondary font-weight-bold">
+											User Fetch: <span>Aziz</span>
+										</p>
+									</div>
+									</div>
+									<div class="d-flex gap-3 align-items-top mb-3">
+										<div class="">
+										<img
+											src="assets/images/icons/ic_up.svg"
+											width="45"
+											height="45"
+											class="rounded-circle"
+											alt=""
+										/>
+										</div>
+										<div class="ps-2">
+										<h6 class="mb-1 font-weight-bold">
+											ADV-0013
+										</h6>
+										<p class="mb-0 font-14 text-secondary font-weight-bold">
+											27 March 2024 14.35
+										</p>
+										<p class="mb-0 font-14 text-secondary font-weight-bold">
+											Status: <span>Fetched</span>
+										</p>
+										<p class="mb-0 font-14 text-secondary font-weight-bold">
+											User Fetch: <span>Aziz</span>
+										</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					  </div>
+					</div>
+				  </div>
+
+				
+				
+			</div>
+		</div>
+		<!--end page wrapper -->
+		<!--start overlay-->
+		<div class="overlay toggle-icon"></div>
+		<!--end overlay-->
+		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
+		<!--End Back To Top Button-->
+		<footer class="page-footer">
+			<p class="mb-0">Copyright © 2024. All right reserved.</p>
+		</footer>
+	</div>
+	<!--end wrapper-->
+	<!-- Bootstrap JS -->
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<!--plugins-->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+	<script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+	<script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+	<script src="assets/js/custom.js"></script>
+	<script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+	<script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
+	<script src="assets/plugins/select2/js/select2.min.js"></script>
+	<script src="assets/plugins/apexcharts-bundle/js/apexcharts.min.js"></script>
+	<script src="assets/js/chart-dashboard.js"></script>
+	<script src="assets/js/script.js"></script>
+
+	<!-- JavaScript -->
+	<script src="js/script.js"></script>
+	<script>
+		$(document).ready(function () {
+			var table = $('#tableOpenDetails').DataTable({
+				dom: '<"row top"<"col-lg-4 col-md-4 col-sm-12 mb-2"B><"col-lg-4 col-md-4 col-sm-12 mb-2"l><"col-lg-4 col-md-4 col-sm-12 mb-2"f>>rtip',
+			});
+		});
+		$(document).ready(function () {
+			var table = $('#tableCloseDetails').DataTable({
+				dom: '<"row top"<"col-lg-4 col-md-4 col-sm-12 mb-2"B><"col-lg-4 col-md-4 col-sm-12 mb-2"l><"col-lg-4 col-md-4 col-sm-12 mb-2"f>>rtip',
+			});
+		});
+	</script>
+	<script>
+		$('.single-select').select2({
+			theme: 'bootstrap4',
+			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+			placeholder: $(this).data('placeholder'),
+			allowClear: Boolean($(this).data('allow-clear')),
+		});
+		$('.multiple-select').select2({
+			theme: 'bootstrap4',
+			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+			placeholder: $(this).data('placeholder'),
+			allowClear: Boolean($(this).data('allow-clear')),
+		});
+	</script>
+	<script>
+		$(".datepicker").pickadate({
+        selectMonths: true,
+        selectYears: true,
+      })
+	</script>
+	<!--app JS-->
+	<script src="assets/js/app.js"></script>
+</body>
+
+</html>
